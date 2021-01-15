@@ -4,6 +4,6 @@
 - [기출문제](https://github.com/jeeyani/CodingTest/tree/master/src/company)
 
 ##### 프로그래머스
-- [Level1]
+- [Level1](https://github.com/jeeyani/CodingTest/tree/master/src/programmers/level1)
 
 ##### 백준
