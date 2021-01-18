@@ -4,7 +4,7 @@
 ##### 코드업 기초 100제
 - [기초-출력](https://github.com/jeeyani/CodingTest/tree/master/src/codeupBasic100/print)
 - [기초-입출력](https://github.com/jeeyani/CodingTest/tree/master/src/codeupBasic100/Inprint)
-
+- [기초-데이터형](https://github.com/jeeyani/CodingTest/tree/master/src/codeupBasic100/dataType)
 
 ##### 프로그래머스
 - [Level1](https://github.com/jeeyani/CodingTest/tree/master/src/programmers/level1)
