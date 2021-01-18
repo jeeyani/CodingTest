@@ -8,10 +8,6 @@ public class n1024 {
 		Scanner sc = new Scanner(System.in);
 		
 		String n = sc.next();
-		String list[] = n.split("\\.");
 		
-		System.out.println(list[0]);
-		System.out.println(list[1]);
-
 	}
 }
