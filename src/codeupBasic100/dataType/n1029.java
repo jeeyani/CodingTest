@@ -2,7 +2,7 @@ package codeupBasic100.dataType;
 
 import java.util.*;
 
-public class n1028 {
+public class n1029 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String a = sc.next(); //자바에는 따로 unsigned 변수타입이 따로 없음으로 String타입으로 받고
