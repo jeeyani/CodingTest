@@ -2,12 +2,12 @@ package codeupBasic100.dataType;
 
 import java.util.*;
 
-public class n1029 {
+public class n1030 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		double a = sc.nextDouble(); 
+		long a = sc.nextLong(); 
 		
-		System.out.print(String.format("%.11f", a));
+		System.out.print(a);
 	
 	}
 }
