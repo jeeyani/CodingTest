@@ -2,10 +2,11 @@ package codeupBasic100.Array;
 
 import java.util.*;
 
-public class n1093 {
+public class n1095 {
 	public static Scanner sc = new Scanner(System.in);
 	
 	public static void main(String[] args) {
+		
 		int n = sc.nextInt();
 		int[] num = new int[n];
 		
@@ -14,16 +15,10 @@ public class n1093 {
 		}
 		sc.nextLine();
 		
-		int[] request = new int[24];
+		Arrays.sort(num);
 		
-	
-		for (int i = 0; i < num.length; i++) {
-			request[num[i]]++;
-		}
+		System.out.print(num[0]);
 		
-		for (int i = 1; i < request.length; i++) {
-			System.out.print(request[i]+" ");
-		}
 		
 	}
 	
