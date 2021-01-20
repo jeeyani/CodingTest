@@ -7,12 +7,15 @@ public class n1083 {
 	
 	public static void main(String[] args) {
 		
-		String n = sc.next();
-		int a = Integer.valueOf(n,16);
+		int n = sc.nextInt();
 		
-		for (int i = 1; i < 16; i++) {
+		for (int i = 1; i <=n ; i++) {
+
+			if(i%3==0) {
+				System.out.print("X ");
+			}
 			
-			System.out.printf("%X*%X=%X\n",a,i,a*i);
+			else{System.out.print(i+" ");}
 		}
 		
 
