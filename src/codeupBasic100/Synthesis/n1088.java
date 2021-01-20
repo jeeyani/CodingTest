@@ -2,23 +2,23 @@ package codeupBasic100.Synthesis;
 
 import java.util.*;
 
-public class n1087 {
+public class n1088 {
 	public static Scanner sc = new Scanner(System.in);
 	
 	public static void main(String[] args) {
 		
 		int n = sc.nextInt();
-		sc.nextLine();
+		int i=0;
 		
-		int sum=0;
-		
-		for (int i = 1; i <= n; i++) {
-			sum+=i;
+		for (i = 1; i <= n; i++) {
 			
-			if(sum>=n) break;
+			if(i%3==0) continue;
+			
+			System.out.print(i+" ");
+			
 		}
 	
-		System.out.print(sum);
+		
 		
 	}
 	
