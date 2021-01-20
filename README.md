@@ -11,7 +11,10 @@
 - [기초-비교연산](https://github.com/jeeyani/CodingTest/tree/master/src/codeupBasic100/Comparison)
 - [기초-논리연산](https://github.com/jeeyani/CodingTest/tree/master/src/codeupBasic100/Logical)
 - [기초-비트단위논리연산](https://github.com/jeeyani/CodingTest/tree/master/src/codeupBasic100/BitWise)
-
+- [기초-조건/선택실행구조](https://github.com/jeeyani/CodingTest/tree/master/src/codeupBasic100/SelectionRun)
+- [기초-반복실행구조](https://github.com/jeeyani/CodingTest/tree/master/src/codeupBasic100/Loop)
+- [기초-종합](https://github.com/jeeyani/CodingTest/tree/master/src/codeupBasic100/Synthesis)
+- [기초-배열](https://github.com/jeeyani/CodingTest/tree/master/src/codeupBasic100/Array)
 
 
 ##### 프로그래머스
