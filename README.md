@@ -21,8 +21,6 @@
 - [Level1](https://github.com/jeeyani/CodingTest/tree/master/src/programmers/level1)
 
 
-##### 코딩테스트 기출
-- [기출문제](https://github.com/jeeyani/CodingTest/tree/master/src/company)
 
 
 
