@@ -38,27 +38,16 @@ public class n13305 {
 	}
 	
 	private static int solve(List<Oils> list) {
-		int totalPrice = 0;
-		int sum =0;
-		int minPrice = Integer.MAX_VALUE;
-		for(Oils oils:list) {
-			if(oils.price < minPrice) {
-				minPrice = oils.price;
-			}
-		}
 		
-		frist:for (int i = 0; i < list.size()-1; i++) {
-			if(list.get(i).price == minPrice) {
-				for (int j = i; j < list.size(); j++) {
-					sum+=list.get(j).km;
-				}
-				totalPrice +=list.get(i).price * sum;
-				break frist;
+		int sum =list.get(0).price*list.get(0).km;
+		for (int i = 0; i < list.size(); i++) {
+			if(list.get(i-1).price < list.get(i).price) {
+				sum+=list.get(i-1).price * list.get(i).km;
 			}else {
-				totalPrice +=list.get(i).price*list.get(i).km;
+				sum+=list.get(i).price * list.get(i).km;
 			}
 		}
-		return totalPrice;
+		return sum;
 	}
 
 }
