@@ -45,9 +45,13 @@ public class n4796 {
 	
 	private static int solve(List<Vacation> list) {
 		int days =0;
-		
+		int temp =0;
 		for(Vacation vac : list) {
-			days = (vac.V/vac.P)*vac.L + (vac.V%vac.P);
+			temp = vac.V%vac.P;
+			if(temp > vac.L) {
+				temp = vac.L;
+			}
+			days = (vac.V/vac.P)*vac.L + temp;
 			return days;
 		}
 		return days;
