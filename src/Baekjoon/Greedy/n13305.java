@@ -37,15 +37,15 @@ public class n13305 {
 		return list;
 	}
 	
-	private static int solve(List<Oils> list) {
+	private static long solve(List<Oils> list) {
+		long sum = 0;
+		long minCount = list.get(0).price;
 		
-		int sum =list.get(0).price*list.get(0).km;
 		for (int i = 0; i < list.size(); i++) {
-			if(list.get(i-1).price < list.get(i).price) {
-				sum+=list.get(i-1).price * list.get(i).km;
-			}else {
-				sum+=list.get(i).price * list.get(i).km;
+			if(list.get(i).price < minCount) {
+				minCount = list.get(i).price;
 			}
+			sum+=minCount*list.get(i).km;
 		}
 		return sum;
 	}
