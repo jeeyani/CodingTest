@@ -1,5 +1,7 @@
 package Baekjoon.Greedy;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class n2217 {
@@ -10,7 +12,7 @@ public class n2217 {
 		int N;
 		N =sc.nextInt();
 		
-		int loopCount[] = new int[N];
+		Integer[] loopCount = new Integer[N];
 		for (int i = 0; i < loopCount.length; i++) {
 			loopCount[i] = sc.nextInt();
 		}
@@ -19,13 +21,15 @@ public class n2217 {
 
 	}
 
-	private static void Loop(int n, int[] loopCount) {
-		int temp;
-		int MAX = n*loopCount[0];
+	private static void Loop(int n, Integer[] loopCount) {
 		
-		for (int i = 0; i < loopCount.length; i++) {
-			temp = n*loopCount[i];
-			if(MAX > temp) {
+		int temp;
+		int MAX = 0;
+
+		Arrays.sort(loopCount,Collections.reverseOrder());
+		for (int i = 0; i < n; i++) {
+			temp = (i+1)*loopCount[i];
+			if (temp > MAX) {
 				MAX = temp;
 			}
 		}
