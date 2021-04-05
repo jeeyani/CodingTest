@@ -1,4 +1,4 @@
-package Baekjoon.Greedy;
+package Baekjoon.Binary;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
