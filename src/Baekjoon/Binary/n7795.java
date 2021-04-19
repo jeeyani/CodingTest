@@ -2,8 +2,8 @@ package Baekjoon.Binary;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
+
 
 public class n7795 {
 
@@ -17,34 +17,36 @@ public class n7795 {
 			int aCount = Integer.parseInt(countTemp[0]);
 			int bCount = Integer.parseInt(countTemp[1]);
 			
-			List<Integer> aList = new ArrayList<Integer>();
-			List<Integer> bList = new ArrayList<Integer>();
+			int[] aList = new int[aCount];
+			int[] bList = new int[bCount];
 			
 			String[] aTemp = br.readLine().split(" ");
 			String[] bTemp = br.readLine().split(" ");
 			
 			for (int j = 0; j < aCount; j++) {
-				aList.add(Integer.parseInt(aTemp[j]));
+				aList[j]=Integer.parseInt(aTemp[j]);
 			}
 			
 			for (int k = 0; k < bCount; k++) {
-				bList.add(Integer.parseInt(bTemp[k]));
+				bList[k]=Integer.parseInt(bTemp[k]);
 			}
+			
+			Arrays.sort(bList);
 			
 			System.out.println(sovle(aList,bList));
 		}
 		
 	}
 
-	private static int sovle(List<Integer> aList, List<Integer> bList) {
+	private static int sovle(int[] aList, int[] bList) {
 		
 		int count = 0;
 		
-		for (int i = 0; i < aList.size(); i++) {
-			for (int j = 0; j < bList.size(); j++) {
-				if (aList.get(i) > bList.get(j)) {
+		for (int i = 0; i < aList.length; i++) {
+			bList:for (int j = 0; j < bList.length; j++) {
+				if (aList[i] > bList[j]) {
 					count++;
-				}
+				}else break bList;
 			}
 		}
 		
