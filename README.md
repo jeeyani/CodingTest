@@ -16,6 +16,9 @@
 - [기초-종합](https://github.com/jeeyani/CodingTest/tree/master/src/codeupBasic100/Synthesis)
 - [기초-배열](https://github.com/jeeyani/CodingTest/tree/master/src/codeupBasic100/Array)
 
+##### 백준
+- [Greedy](https://github.com/jeeyani/CodingTest/tree/master/src/Baekjoon/Greedy)
+- [Binary](https://github.com/jeeyani/CodingTest/tree/master/src/Baekjoon/Binary)
 
 ##### 프로그래머스
 - [Level1](https://github.com/jeeyani/CodingTest/tree/master/src/programmers/level1)
