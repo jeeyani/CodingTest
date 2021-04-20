@@ -43,7 +43,7 @@ public class n1260 {
 		System.out.println("");
 		BFS(start);
 		
-	}
+	} 
 
 
 	private static void BFS(int start) {
