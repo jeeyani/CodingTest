@@ -24,7 +24,7 @@ public class n1260 {
 		String[] input = br.readLine().split(" ");
 		n = Integer.parseInt(input[0]);
 		m = Integer.parseInt(input[1]);
-		start = Integer.parseInt(input[2]); 
+		start = Integer.parseInt(input[2]);
 		
 		visiteDFS = new boolean[m+1];
 		visiteBFS = new boolean[m+1];
