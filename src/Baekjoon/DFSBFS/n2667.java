@@ -41,9 +41,10 @@ public class n2667 {
 		}
 		
 		Collections.sort(countList);
-		sb.append(countList.size()+"\n");
+		sb.append(countList.size()+"\n"); //전체 단지 수
 		
-		for(int num : countList) {
+		for(int num : countList) { //각 단지안에 가구 수 출력하기
+			
 			sb.append(num+"\n");
 		}
 		
@@ -81,6 +82,8 @@ public class n2667 {
 		if(home[i][j] == 0 || visited[i][j] == true) {
 			return false;
 		}
+		
+		//가구를 확인 할 수 있는 곳만 선별
 		return true;
 	}
 
