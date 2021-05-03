@@ -86,7 +86,7 @@ class Solution {
 		int nextY = (i-1) % 3; // 다음y 좌표구하기
 		
 		
-		int result = Math.abs(locationX-nextX)+(locationY-nextY);
+		int result = Math.abs(locationX-nextX)+Math.abs(locationY-nextY);
 		
 		return result;
 	}
