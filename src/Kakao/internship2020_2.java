@@ -30,20 +30,22 @@ class Solution2 {
     
     public long solution(String expression) {
 		String n = "";
+		
+		//1. 연산자와 숫자 따로 구분하여 저장하기
 		for(int i = 0; i < expression.length(); i++) {
 			char exp = expression.charAt(i);
 			if(exp == '+' || exp == '-' || exp == '*') {
 				operList.add(exp + "");
 				numList.add(Long.parseLong(n));
 				n = "";
-			} else {
+			} else { //그냥 숫자인 경우
 				n += exp;
 			}
 		}  
 		// 마지막 숫자 삽입 
 		numList.add(Long.parseLong(n));
 	
-		//순열 만들기
+		//순열 만들기(우선순위 경우의 수 찾기)
 		per(0, oper.length);
 		
 		return answer;
@@ -56,11 +58,11 @@ class Solution2 {
 		
 			return;
 		}
-
+		//최대 3! 3P3
 		for(int i = 0; i < oper.length; i++) {
 			if(!visited[i]) {
 				visited[i] = true;
-				output[depth] = oper[i];
+				output[depth] = oper[i]; //oper = {"+", "-", "*"}; + , - , * 순으로 연산
 				per(depth + 1, r);  
 				visited[i] = false;
 			}
