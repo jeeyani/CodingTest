@@ -31,6 +31,7 @@ class Solution2 {
     public long solution(String expression) {
 		String n = "";
 		
+		
 		//1. 연산자와 숫자 따로 구분하여 저장하기
 		for(int i = 0; i < expression.length(); i++) {
 			char exp = expression.charAt(i);
