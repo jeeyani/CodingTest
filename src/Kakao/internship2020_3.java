@@ -40,7 +40,7 @@ class Solution3 {
 		//각기 다른 보석타입구하기
 		countGemType(gems);
 		
-		//
+		//가게 보석탐색
 		shopGems(gems);
 		return new int[] { answerStartIndex + 1, answerStartIndex + answerSize };
 
@@ -96,7 +96,6 @@ class Solution3 {
 				gemsToBuyCount.put(startGem, startGemCount - 1);
 				gemsToBuy.poll();
 				startIndex++;
-				System.out.println("startIndex"+startIndex);
 			} else {
 				break;
 			}
