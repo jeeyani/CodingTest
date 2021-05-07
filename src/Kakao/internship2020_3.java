@@ -52,6 +52,7 @@ class Solution3 {
 
 	}
 	
+	//gems[]를 순서대로 탐색하면서 gem을 gemsToBuy(Queue)에 담고, 조건을 체크하여 답을 업데이트 한다.
 	private void shopGems(String[] gems) {
 		for (String gem : gems) {
 			//1. 구매한 보석에 대한 함수
@@ -83,6 +84,8 @@ class Solution3 {
 
 	}
 	
+	//gemsToBuy(Queue)의 맨 첫 번째 gem이 맨 뒤에 또 들어 온다면 최단 구간이 아니게 되므로, 맨 첫 번째 gem을 삭제하는 메소드
+	//이 때 gemsToBuyCount를 통해 이미 존재하는 gem인지 아닌지 확인
 	private void removeDuplicateStartGem() {
 		while (true) {
 			String startGem = gemsToBuy.peek(); // 큐에 저장된 순서대로 추출
@@ -101,6 +104,7 @@ class Solution3 {
 
 	}
 	
+	//gemsToBuy(Queue)에 모든 gemType(Set)이 포함되어 있고, gemsToBuy(Queue)의 길이가 현재까지 구한 최단 구간의 길이보다 작은 경우 최종 답을 업데이트
 	private void updateAnswer() {
 		//진열대 번호가 제일 작은 구간
 		if (gemsToBuyCount.size() == gemType.size() && answerSize > gemsToBuy.size()) {
