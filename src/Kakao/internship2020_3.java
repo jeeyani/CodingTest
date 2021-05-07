@@ -102,6 +102,7 @@ class Solution3 {
 	}
 	
 	private void updateAnswer() {
+		//진열대 번호가 제일 작은 구간
 		if (gemsToBuyCount.size() == gemType.size() && answerSize > gemsToBuy.size()) {
 			answerStartIndex = startIndex;
 			answerSize = gemsToBuy.size();
