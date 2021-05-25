@@ -21,6 +21,7 @@ public class n1010 {
 			System.out.println(combi(N,M));
 			
 		}
+		
 
 	}
 
