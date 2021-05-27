@@ -35,7 +35,7 @@ public class n1018 {
 			}
 		}
 		
-
+		//8*8 을 만들 수 있는 경우의 수를 구하기 위함
 		int N_row = N - 7;
 		int M_col = M - 7;
 		
@@ -50,6 +50,7 @@ public class n1018 {
 
 	private static void find(int x, int y) {
 		
+		//현재 체스판의 마지막 x,y좌표
 		int end_x = x + 8;
 		int end_y = y + 8;
 		int count = 0;
