@@ -47,6 +47,7 @@ public class lessons64061 {
 			}
 			
 		}
+		
 		int[] temp;
 		temp = new int[notSameCount];
 		int basketIndex = 1;
