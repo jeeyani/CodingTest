@@ -36,6 +36,7 @@ public class lessons42862 {
 			listener[reserve[i] - 1] = 1;
 		}
 
+		//수업에 참여할 수 있는 학생 구하기
 		for (int i = 0; i < listener.length; i++) {
 			if (listener[i] < 0) {
 				if (i != 0 && listener[i-1] > 0) {
