@@ -24,6 +24,7 @@
 
 ##### 프로그래머스
 - [Level1](https://github.com/jeeyani/CodingTest/tree/master/src/programmers/level1)
+- [Greedy](https://github.com/jeeyani/CodingTest/tree/master/src/programmers/Greedy)
 - [DFSBFS](https://github.com/jeeyani/CodingTest/tree/master/src/programmers/DFSBFS)
 - [Sorting](https://github.com/jeeyani/CodingTest/tree/master/src/programmers/Sorting)
 - [ExhaustiveSearch](https://github.com/jeeyani/CodingTest/tree/master/src/programmers/ExhaustiveSearch)
