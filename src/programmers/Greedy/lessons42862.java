@@ -38,14 +38,21 @@ public class lessons42862 {
 
 		//수업에 참여할 수 있는 학생 구하기
 		for (int i = 0; i < listener.length; i++) {
+			
 			if (listener[i] < 0) {
-				if (i != 0 && listener[i-1] > 0) {
+				//맨 처음학생이 아니고, 앞학생이 여벌을 가지고 있는 학생인 경우
+				if (i-1 >=0 && listener[i-1] == 1) {
 					listener[i]++;
 					listener[i -1]--;
 
-				} else if (i != n - 1 && listener[i+1] > 0) {
+				//맨 뒤 학생이 아니고, 뒤 학생이 여벌을 가지고 있는 경우
+				} else if (i+1 < listener.length && listener[i+1]==1) {
 					listener[i]++;
 					listener[i + 1]--;
+					
+				//맨 앞, 맨뒤 학생이 도난 당한 경우 미리 빼두기
+				} else {
+					answer --;
 				}
 			}
 
@@ -55,11 +62,6 @@ public class lessons42862 {
 			if (!(listener[i] < 0)) {
 				answer++;
 			}
-		}
-
-		// 수업듣고 있는 사람 확인 용
-		for (int i = 0; i < listener.length; i++) {
-			System.err.println(listener[i]);
 		}
 
 		return answer;
