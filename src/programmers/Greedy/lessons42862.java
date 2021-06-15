@@ -22,24 +22,20 @@ public class lessons42862 {
 
 	private static int solution(int n, int[] lost, int[] reserve) {
 
-		int answer = 0;
+		int answer = n;
 
 		int[] listener = new int[n];
 
 		// 도난당한 학생 찾기
-		for (int i = 0; i < lost.length; i++) {
-			listener[lost[i] - 1] = -1;
-
-		}
+		for (int l : lost) listener[l-1]--;
+		
 		// 여벌가진 학생 찾기
-		for (int i = 0; i < reserve.length; i++) {
-			listener[reserve[i] - 1] = 1;
-		}
+		 for (int r : reserve) listener[r-1]++;
 
 		//수업에 참여할 수 있는 학생 구하기
 		for (int i = 0; i < listener.length; i++) {
 			
-			if (listener[i] < 0) {
+			if (listener[i] == -1) {
 				//맨 처음학생이 아니고, 앞학생이 여벌을 가지고 있는 학생인 경우
 				if (i-1 >=0 && listener[i-1] == 1) {
 					listener[i]++;
@@ -56,12 +52,6 @@ public class lessons42862 {
 				}
 			}
 
-		}
-
-		for (int i = 0; i < listener.length; i++) {
-			if (!(listener[i] < 0)) {
-				answer++;
-			}
 		}
 
 		return answer;
