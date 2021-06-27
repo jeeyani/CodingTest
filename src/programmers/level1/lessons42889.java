@@ -21,20 +21,29 @@ public class lessons42889 {
 
 		Map<Integer, Double> map = new HashMap<Integer, Double>();
 		// double[] failureRate = new double[N];
-		int user = stages.length;
+		
 
 		for (int i = 1; i <= N; i++) {
+			int user = 0;
 			int arrive = 0;
 			for (int j = 0; j < stages.length; j++) {
-
-				if (i == stages[j]) {
-					arrive++;
+				if(i<=stages[j]) {
+					user++;
+					if (i == stages[j]) {
+						arrive++;
+					}
 				}
+				
 			}
-
-			// failureRate[i-1] = (double)arrive/user;
-			map.put(i, (double) arrive / user);
-			user = user - arrive;
+			
+			if(user==0) {
+				map.put(i,0.0);
+			}
+			else {
+				map.put(i, (double) arrive / user);
+				user = user - arrive;
+				
+			}
 
 		}
 
@@ -44,7 +53,7 @@ public class lessons42889 {
 
 		int k = 0;
 		for (Integer key : keySetList) {
-			System.out.println("key : " + key + " / " + "value : " + map.get(key));
+			//System.out.println("key : " + key + " / " + "value : " + map.get(key));
 			answer[k] = key;
 			k++;
 		}
