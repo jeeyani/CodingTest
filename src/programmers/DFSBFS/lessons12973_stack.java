@@ -2,7 +2,7 @@ package programmers.DFSBFS;
 
 import java.util.Stack;
 
-public class lessons12973_stack {
+public class lessons12973_stack { 
 
 	public static void main(String[] args) {
 		
