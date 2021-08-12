@@ -1,7 +1,7 @@
 package programmers.level2;
 
 import java.util.LinkedList;
-import java.util.Queue;import javax.crypto.AEADBadTagException;
+import java.util.Queue;
 
 public class lessons1829 {
 
@@ -31,7 +31,7 @@ public class lessons1829 {
 		}
 	}
 	
-	static Queue<Node> q = new LinkedList<lessons1829.Node>();
+	static Queue<Node> q = new LinkedList<Node>();
 	static boolean[][] visited; //방문한 위치 체크
 	static int areaSize =0; //영역의 갯수
 
@@ -42,8 +42,8 @@ public class lessons1829 {
         
         visited = new boolean[m][n];
         
-        for (int i = 0; i < picture.length; i++) {
-			for (int j = 0; j < picture.length; j++) {
+        for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
 				if(picture[i][j] > 0 && visited[i][j] != true) {//방문 안한곳 탐사
 					areaSize = 1; //방문하자 마다 사이즈 1로 초기화
 					bfs(picture,i,j,m,n);
