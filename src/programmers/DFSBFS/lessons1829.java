@@ -1,4 +1,4 @@
-package programmers.level2;
+package programmers.DFSBFS;
 
 import java.util.LinkedList;
 import java.util.Queue;
