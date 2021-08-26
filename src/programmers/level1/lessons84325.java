@@ -12,8 +12,48 @@ public class lessons84325 {
 		String result;
 
 		result = solution(table, languages, preference);
+		result = solutionOther(table, languages, preference);
 		System.out.println(result);
 
+	}
+
+
+	private static String solutionOther(String[] table, String[] languages, int[] preference) {
+		String rstStr[] = new String[table.length]; 
+		int[] sum = new int[table.length]; //선호도 합산
+		
+		for (int i = 0; i < table.length; i++) {
+			
+			String[] temp = table[i].split(" ");
+			rstStr[i] = table[i].split(" ")[0];
+			
+			for (int j = 1; j < temp.length; j++) {
+				for (int k = 0; k < languages.length; k++) {
+					if(temp[j].equals(languages[k])) {
+						sum[i] +=(temp.length-j) * preference[k];
+					}
+				}
+			}
+			
+		}
+		
+		//최댓값 탐색하기
+		int temp = sum[0]; 
+		String answer = rstStr[0];
+		for (int i = 0; i < sum.length; i++) {
+			if(temp <=sum[i]) {
+				if (temp == sum[i] && answer.compareTo(rstStr[i]) > 0) { 
+					answer = rstStr[i];
+				}else if(temp < sum[i]) {
+					temp = sum[i];
+					answer = rstStr[i];
+				}
+			}
+		}
+	
+		return answer;
+
+		
 	}
 
 
@@ -46,6 +86,7 @@ public class lessons84325 {
 				max = sum[i];
 				index = i;
 			}
+
 		}
 		String[] chk = table[index].split(" ");
 		answer = chk[0];
