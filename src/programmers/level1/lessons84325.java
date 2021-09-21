@@ -42,7 +42,7 @@ public class lessons84325 {
 		String answer = rstStr[0];
 		for (int i = 0; i < sum.length; i++) {
 			if(temp <=sum[i]) {
-				if (temp == sum[i] && answer.compareTo(rstStr[i]) > 0) { 
+				if (temp == sum[i] && answer.compareTo(rstStr[i]) > 0) { /*compareTo*/
 					answer = rstStr[i];
 				}else if(temp < sum[i]) {
 					temp = sum[i];

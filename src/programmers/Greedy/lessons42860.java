@@ -40,10 +40,10 @@ public class lessons42860 {
             
             if(temp == continue_a){ //countinue_a 맨왼쪽이 A일 경우 A의 연속된 갯수
                 
-                index_a = name.indexOf("A".repeat(temp), index_a+1); //ex)  첫 A 위치 이후 'AAA'의 위치 찾기
+                //index_a = name.indexOf("A".repeat(temp), index_a+1); //ex)  첫 A 위치 이후 'AAA'의 위치 찾기
                 
             }else{ // 맨 왼쪽끝이 A가 아닐경우 
-                index_a = name.indexOf("A".repeat(temp)); //'AAA'의 위치 찾기
+                //index_a = name.indexOf("A".repeat(temp)); //'AAA'의 위치 찾기
                 continue_a = temp;
             }
             
