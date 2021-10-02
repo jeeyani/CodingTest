@@ -1,7 +1,9 @@
 package programmers.WeeklyChallenge;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class sevenWeek {
 
@@ -18,6 +20,7 @@ public class sevenWeek {
 		int[] leave4= {1,3,2};
 		
 		int[] result = solution(enter1, leave1);
+		result = solutionMap(enter2, leave2);
 		
 		for (int i = 0; i < result.length; i++) {
 			System.out.print(result[i]+" ");
@@ -25,7 +28,47 @@ public class sevenWeek {
 
 	}
 
-	//다른 사람 풀이
+	//Map 사용한 다른 사람 풀이
+	private static int[] solutionMap(int[] enter, int[] leave) {
+		 //결과값 사람 수 만큼 초기화
+        int[] answer = new int[enter.length];
+        
+        //key: 사람의 번호
+        Map<Integer, Integer> room =  new HashMap<Integer, Integer>();
+        
+        //각 입실과 퇴실의 index 초기화
+        int eIdx = 0;
+        int lIdx = 0;
+        
+        while(eIdx != enter.length || lIdx != leave.length) {
+        	room.put(enter[eIdx],enter[eIdx]);
+        	
+        	//회의실에 입장한 사람이 있을 경우
+        	if(room.size() > 1) {
+        		for(int key: room.keySet()) {
+        			//방에 들어오면 무조건 만남
+        			answer[key-1]++;
+        		}
+        		//회의실에 들어온 사람은 현재 회의실에 있는 사람 수 만큼 사람은 만남
+        		answer[enter[eIdx]-1] += room.size()-2;
+        	}
+        	
+        	while(true) {
+        		
+        		if(lIdx < leave.length && room.containsKey(leave[lIdx])) {
+        			room.remove(leave[lIdx]);
+        			lIdx++;
+        		}
+        		else {
+        			break;
+        		}
+        	}
+        	eIdx++;
+        }    
+		return answer;
+	}
+
+	//List 사용한 다른 사람 풀이
 	private static int[] solution(int[] enter, int[] leave) {
 		 //결과값 사람 수 만큼 초기화
         int[] answer = new int[enter.length];
