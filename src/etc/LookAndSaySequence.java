@@ -12,17 +12,73 @@ public class LookAndSaySequence {
 
 	public static void main(String[] args) {
 		
-		int n = 9;
+		int n = 40;
 		
-		String result = solution(n);
+		String result = solution2(n);
+		
+		//result = solution2(n);
 		System.out.println(result);
 		
 	}
 
+	private static String solution2(int n) {
+		
+		String answer ="1";
+		
+		String next = "";
+		int idx = 0;
+		
+		while(idx < n) {
+			
+			next = ANT(answer);
+			answer = next;
+			idx++;
+			
+		}
+		
+		
+		return answer;
+		
+	}
+
+	private static String ANT(String answer) {
+		
+		String next = "";
+		
+		for (int i = 0; i < answer.length(); i++) {
+			// 첫 번째 문자가 아닐 때, 앞 문자와 같으면
+			if(i>0) {
+				if(answer.charAt(i-1) == answer.charAt(i)) {
+					continue;
+				}
+			}
+			//계속 누적하기
+			next += numberOf(answer, i);
+		}
+		
+		return next;
+		
+	}
+
+	//앞 문자와 같지 않은 경우 때부터 같은 문자 숫자 세기
+	private static String numberOf(String answer, int index) {
+		
+		char str = answer.charAt(index);
+		int cnt =0;
+		
+		for (int j = index; j < answer.length(); j++) {
+			if(str == answer.charAt(j)) {
+				cnt++;
+			}else {break;}
+			
+		}
+		return str + Integer.toString(cnt);
+	}
+
+	/* 40번째 값이 출력되지 않음 */
 	private static String solution(int n) {
 		String answer = "";
 		
-		//최대 40번 반복까지 할 수 있음
 		for (int i = 0; i < n; i++) {
 			
 			//첫 시작은 1부터 시작
@@ -34,7 +90,7 @@ public class LookAndSaySequence {
 				
 				char[] input = answer.toCharArray(); // 문자형으로 변형하여 넣어주기
 				answer = ""; //초기화
-				String target = ""; //숫자 갯수를 누적 하자
+				String target = ""; //숫자 갯수를 계산해서 누적 하자
 
 				//input 하나씩 읽기
 				for (int j = 0; j < input.length; j++) {
@@ -44,7 +100,7 @@ public class LookAndSaySequence {
 						target += ""+input[j];
 						answer = "1";
 					}
-					//앞 문자와 같으면 target에 넣기
+					//첫 문자와 같으면 target에 넣기
 					else if(target.charAt(0) == input[j]) {
 						target += ""+input[j];
 					}
