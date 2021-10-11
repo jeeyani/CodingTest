@@ -17,10 +17,15 @@
 - [기초-배열](https://github.com/jeeyani/CodingTest/tree/master/src/codeupBasic100/Array)
 
 ##### 백준
-- [Greedy](https://github.com/jeeyani/CodingTest/tree/master/src/Baekjoon/Greedy)
+
 - [Binary](https://github.com/jeeyani/CodingTest/tree/master/src/Baekjoon/Binary)
 - [DFSBFS](https://github.com/jeeyani/CodingTest/tree/master/src/Baekjoon/DFSBFS)
+- [DP](https://github.com/jeeyani/CodingTest/tree/master/src/Baekjoon/DP)
+- [ExhaustiveSearch](https://github.com/jeeyani/CodingTest/tree/master/src/Baekjoon/ExhaustiveSearch)
+- [Greedy](https://github.com/jeeyani/CodingTest/tree/master/src/Baekjoon/Greedy)
+- [Realization](https://github.com/jeeyani/CodingTest/tree/master/src/Baekjoon/Realization)
 - [Sorting](https://github.com/jeeyani/CodingTest/tree/master/src/Baekjoon/Sorting)
+- [Stack](https://github.com/jeeyani/CodingTest/tree/master/src/Baekjoon/Stack)
 
 ##### 프로그래머스
 - [Level1](https://github.com/jeeyani/CodingTest/tree/master/src/programmers/level1)
@@ -29,7 +34,7 @@
 - [DFSBFS](https://github.com/jeeyani/CodingTest/tree/master/src/programmers/DFSBFS)
 - [Sorting](https://github.com/jeeyani/CodingTest/tree/master/src/programmers/Sorting)
 - [ExhaustiveSearch](https://github.com/jeeyani/CodingTest/tree/master/src/programmers/ExhaustiveSearch)
-- [TEST]
+- [WeeklyChallenge](https://github.com/jeeyani/CodingTest/tree/master/src/programmers/WeeklyChallenge)
 
 ##### 카카오 기출
 - [Kakao 인턴십 기출](https://github.com/jeeyani/CodingTest/tree/master/src/Kakao)
