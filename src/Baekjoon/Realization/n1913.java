@@ -25,6 +25,7 @@ public class n1913 {
 				sb.append(result[i][j]).append(" ");
 				
 				if(result[i][j] == k) {
+					//출력값은 (1,1)부터 시작
 					kx = i+1;
 					ky = j+1;
 				}
